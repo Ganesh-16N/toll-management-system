@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: rgb(0, 0, 0); */
+}
+
+nav {
+  width: 100%;
+  position: sticky;
+  top: 35px;
+}
+
+.main {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  height: 100vh;
+  width: 100%;
+}
+.heading {
+  margin: 0px 0 0px 0px;
+  color: rgb(255, 255, 255);
+  background-color: brown;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-top: 10px;
+  border: 2px solid rgb(160, 33, 4);
+  border-radius: 3px;
+  text-shadow: 0 0 3px rgb(0, 0, 0);
+}
+.head {
+  position: sticky;
+  top: -2px;
+  margin: 0px 0 0px 0px;
+  color: rgb(244, 0, 0);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.logsHeading {
+  color: rgb(0, 0, 0);
+  width: 100%;
+  display: flex;
+  margin-bottom: 3px;
+  padding: 6px;
+  justify-content: space-between;
+  background-color: rgb(245, 200, 76);
+}
+.logsHeading .logsHeading1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.3rem;
+}
+.logsHeading select {
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  margin-left: 30px;
+}
+.logsHeading select {
+  height: 25px;
+  width: 90px;
+  background-color: brown;
+  color: aliceblue;
+  outline: 1px solid rgb(255, 255, 255);
+  padding-left: 5px;
+}
+.logsHeading select:focus {
+  color: rgb(255, 255, 255);
+}
+.logsHeading .sortIcon {
+  margin-right: 20px;
+  margin-left: 5px;
+}
+.search {
+  border: 2px solid brown;
+  padding: 4px;
+  border-radius: 4px;
+  outline: none;
+  padding-left: 10px;
+  width: 500px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  outline: 1px solid rgb(255, 191, 0);
+}
+.search::placeholder{
+  color: rgb(0, 0, 0);
+}
+.truck {
+  font-size: 26px;
+}
+
+/* table */
+.table {
+  width: 100%;
+}
+.table tr th {
+  text-align: left;
+  padding: 10px;
+  background-color: rgb(190, 91, 91);
+  color: white;
+  text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+.table tr th,
+.table tr td {
+  padding: 3px 1% 3px 1%;
+  max-width: 100px;
+  overflow-wrap: break-word;
+  /* border-bottom: 1px solid #000; */
+}
+.table tr:nth-child(odd){
+  background-color: rgb(247, 231, 211);
+}
+#myForm,
+.toll-list {
+  width: 100%;
+  position: absolute;
+  border-radius: 0px;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  top: 0px;
+  z-index: 2;
+  padding: 0px;
+}
+.add-button {
+  position: fixed;
+  top: 15px;
+  right: 340px;
+  border: 1px solid grey;
+  padding: 2px 7px;
+  border-radius: 3px;
+  border: 2px solid rgb(163, 10, 4);
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 2px 2px 7px black;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  
+}
+.newToll-button {
+  position: fixed;
+  top: 15px;
+  right: 190px;
+  border: 1px solid grey;
+  padding: 2px 7px;
+  border-radius: 3px;
+  border: 2px solid rgb(159, 19, 0);
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  box-shadow: 2px 2px 7px black;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+.tolls-button {
+  position: fixed;
+  top: 15px;
+  right: 40px;
+  border: 1px solid grey;
+  padding: 2px 7px;
+  border-radius: 3px;
+  color: rgb(158, 9, 4);
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 2px 2px 7px black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.close {
+  position: absolute;
+  right: 37px;
+  top: 13px;
+  padding: 3px 5px;
+  background-color: rgb(248, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 1.4px solid rgb(255, 196, 0);
+  border-radius: 5px;
+  outline: none;
+  font-weight: bold;
+  height: 30px;
+  cursor: pointer;
+}
+
+.add-button:hover,
+.newToll-button:hover,
+.tolls-button:hover {
+  font-size: 1.1rem;
+  color: rgb(255, 98, 0);
+}
+.add-button:focus,
+.newToll-button:focus,
+.tolls-button:focus {
+  font-size: 1.2rem;
+  color: rgb(226, 70, 43);
+}
+
+
+.vtype {
+  display: inline-block;
+  width: 150px;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+.tollNameInputLabel {
+  font-size: 1.2rem;
+  margin-right: 10%;
+}
+.toll_form{
+  width: 60vw;
+  padding: 15px;
+  height: 88vh;
+  margin: 5px auto 0px;
+  border-radius: 10px;
+  border: 1px solid rgb(104, 103, 103);
+  box-shadow: 7px 8px 25px rgb(82, 82, 82);
+  background-color: rgb(246, 235, 185);
+}
+
+.toll_form input {
+  border: 1px solid grey;
+  padding: 5px;
+  background-color: rgb(247, 237, 237);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  margin-left: 5%;
+  outline: none;
+}
+.tollNameInput {
+  width: 40%;
+}
+.main-label {
+  font-size: 1.3rem;
+  padding-bottom: 50px;
+}
+button[type="submit"] {
+  border: none;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  margin: 20px 20%;
+  width: 60%;
+  background-color: brown;
+  color: rgb(244, 244, 244);
+  padding: 10px;
+}
+
+.AddNewTollHeading {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.main-label-heading {
+  margin-bottom: 20px;
+}
+.listHeading{
+  background-color: rgb(229, 205, 51);
+  text-align: center;
+  padding: 5px;
+}
+
+input:focus::placeholder,
+input:hover::placeholder {
+  color: rgb(219, 0, 0);
+  /* font-weight: bold; */
+}
+.AddVheading {
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 10px rgb(153, 150, 155);
+}
+.tollname {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.tollName select {
+  border: none;
+  outline: none;
+
+}
+select:hover,
+select:focus {
+  /* font-size: 1.1rem; */
+  color-scheme: rgb(245, 71, 23);
+}
+.form {
+  margin: auto auto;
+  width: 70vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  padding: 1% 5%;
+  padding-bottom: 2%;
+  grid-gap: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(104, 103, 103);
+  box-shadow: 7px 8px 25px rgb(82, 82, 82);
+  margin-top: 1%;
+  background-color: rgb(250, 240, 221);
+}
+.form label {
+  width: 160px;
+}
+.form select {
+  width: 200px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  height: 30px;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 7px;
+}
+.numberInput {
+  width: 200px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  height: 30px;
+  outline: none;
+  padding-left: 10px;
+}
+.form select:hover {
+  /* padding: 5px; */
+  background-color: rgb(249, 209, 145);
+}
+
+.form button[type="submit"] {
+  width: 90%;
+  margin: auto 5%;
+  margin-top: 3%;
+}
+.journey {
+  display: flex;
+  flex-direction: column;
+}
+.journey span {
+  width: 200px;
+  margin-bottom: 5px;
+}
+.journey input {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.trf {
+  display: inline;
+}
+.tariff {
+  border: 1px solid rgb(71, 70, 70);
+  width: 50%;
+  display: inline-block;
+  height: 60px;
+  border-radius: 10px;
+  /* box-shadow: 5px 3px 10px grey; */
+  font-size: 30px;
+  text-align: center;
+  color: rgb(241, 73, 26);
+  padding: 10px;
+}
+
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+@media screen and (max-width: 400px) {
+  .heading {
+    color: rgb(18, 18, 18);
+    font-size: 20px;
+    margin-left: 5%;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .form {
+    display: grid;
+    grid-template-columns: 20%;
+    border: none;
+    box-shadow: none;
+  }
+  .tollname {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+  }
+  .form button[type="submit"] {
+    width: 200px;
+    margin-left: -1px;
+  }
+  .tariff {
+    width: 200px;
+  }
+  #myForm {
+    width: 420px;
+  }
+  .close {
+    position: absolute;
+    top: 12.5%;
+    right: 90px;
+  }
+  .toll-list {
+    width: 420px;
+    padding: 0;
+  }
+  .toll-list .close {
+    position: absolute;
+    top: 10.3%;
+  }
+  .i1 {
+    width: 60%;
+  }
+  .i2 {
+    width: 60%;
+  }
+  .tariffDetails {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .newTolls button[type="submit"] {
+    width: 70%;
+    margin-left: 10%;
+  }
+  .add-button,
+  .newToll-button,
+  .tolls-button {
+    width: 33.3%;
+    margin: 0;
+  }
+  .add-button {
+    top: 0%;
+    left: 0%;
+  }
+  .newToll-button {
+    top: 0%;
+    left: 33%;
+  }
+  .tolls-button {
+    top: 0%;
+    left: 66%;
+  }
+  nav {
+    top: 10%;
+  }
+  .heading {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  hr {
+    margin-left: 40px;
+  }
+  .search {
+    margin-bottom: 10px;
+  }
+}
